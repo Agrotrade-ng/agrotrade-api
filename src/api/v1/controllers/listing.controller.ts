@@ -1,6 +1,6 @@
 import { Request, Response } from 'express';
 
-export class ProductController {
+export class ListingController {
     private service;
 
     constructor() {
