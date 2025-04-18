@@ -8,6 +8,7 @@ import { Logger } from './api/v1/helpers/logger';
 import { AuthRoute } from './api/v1/routes/auth.routes';
 import { ErrorHandler } from './api/v1/middlewares/error.middleware';
 import { LoggerMiddleware } from './api/v1/middlewares/logger.middleware';
+import { ListingRoute } from './api/v1/routes/listing.routes';
 
 export class App {
     private app: Express;
@@ -27,7 +28,10 @@ export class App {
 
         // call other config functions
         this.configureMiddlewares();
-        this.configureRoutes([new AuthRoute(this.app)]);
+        this.configureRoutes([
+            new AuthRoute(this.app),
+            new ListingRoute(this.app),
+        ]);
     }
 
     private configureMiddlewares(): void {
