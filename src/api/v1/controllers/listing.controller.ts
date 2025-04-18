@@ -12,6 +12,8 @@ export class ListingController {
 
     handleFetchSingleProduct = async (req: Request, res: Response) => {};
 
+    handleFetchMyProducts = async (req: Request, res: Response) => {};
+
     handleCreateProduct = async (req: Request, res: Response) => {};
 
     handleDeleteProduct = async (req: Request, res: Response) => {};
