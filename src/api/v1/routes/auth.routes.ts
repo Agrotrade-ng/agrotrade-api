@@ -29,13 +29,13 @@ export class AuthRoute implements IRouter {
         },
         {
             route: '/profile',
-            method: Method.POST,
+            method: Method.GET,
             middleware: [authHeaderMiddleware],
             controller: this.controller.handleFetchProfile,
         },
         {
             route: '/refresh-token',
-            method: Method.POST,
+            method: Method.GET,
             middleware: [authHeaderMiddleware],
             controller: this.controller.handleRefreshToken,
         },
